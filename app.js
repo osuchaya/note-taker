@@ -10,6 +10,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get("/notes", function (req, res) {
+    res.sendFile(path.join(pFolder, "notes.html"));
+  });
+  
 app.listen(port, function () {
     console.log(`App listening on port ${port}.`);
   });
