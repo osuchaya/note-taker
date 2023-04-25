@@ -21,6 +21,12 @@ app.get("/notes", function (req, res) {
   app.get("*", function (req, res) {
     res.sendFile(path.join(pFolder, "index.html"));
   });
+
+  app.post("/api/notes", function (req, res) {
+    console.log('Note received for creation');
+    console.log('req.body = ',req.body);
+    
+});
   
 app.listen(port, function () {
     console.log(`App listening on port ${port}.`);
