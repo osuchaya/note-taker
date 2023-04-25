@@ -17,6 +17,10 @@ app.get("/notes", function (req, res) {
   app.get("/api/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "/db/db.json"));
   });
+
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(pFolder, "index.html"));
+  });
   
 app.listen(port, function () {
     console.log(`App listening on port ${port}.`);
