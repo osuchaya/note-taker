@@ -13,6 +13,10 @@ app.use(express.json());
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(pFolder, "notes.html"));
   });
+
+  app.get("/api/notes", function (req, res) {
+    res.sendFile(path.join(__dirname, "/db/db.json"));
+  });
   
 app.listen(port, function () {
     console.log(`App listening on port ${port}.`);
