@@ -41,6 +41,29 @@ app.post("/api/notes", function (req, res) {         //got post request for rout
     res.json(notesInDb);
 });
 
+app.delete("/api/notes/:id", function (req, res) {         //got post request for route /api/notes from front-end
+    console.log('Note id received for deletion');
+    console.log('req.params.id = ', req.params.id);            //req.body = new notes
+
+    let notesInDb = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));    //read all current notes from db.json and store in an array
+                     
+
+    let deleteID = req.params.id;
+    // let createID = uuid()
+    let id = 0;
+    notesInDb = notesInDb.filter((note) => {
+        return note.id != deleteID
+    })
+    for (note of notesInDb) {
+        note.id = id.toString();
+        id++;
+    }
+
+
+    fs.writeFileSync("./db/db.json", JSON.stringify(notesInDb));
+    res.json(notesInDb);
+});
+
 app.listen(port, function () {
     console.log(`App listening on port ${port}.`);
 });
