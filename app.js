@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const express = require("express");
-// const uuid = require("uuid");
+// const { v4: uuid } = require("uuid");  //alternative code for generating random id for note
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -49,7 +49,7 @@ app.delete("/api/notes/:id", function (req, res) {         //got post request fo
                      
 
     let deleteID = req.params.id;
-    // let createID = uuid()
+    // let createID = uuidv4()    //alternative code for generating random id but excluded from code as less understood how it works
     let id = 0;
     notesInDb = notesInDb.filter((note) => {
         return note.id != deleteID
