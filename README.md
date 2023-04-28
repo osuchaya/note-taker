@@ -1,9 +1,8 @@
 # Note Taker
 Visit the deployed site at https://note-taker-osuchaya.herokuapp.com/notes
 
-Screeshot of deployed site:
-![](/public/assets/Screenshot 2023-04-27 at 10.13.29 PM.png)
-
+Screenshot of deployed site:
+![](../Screenshot%202023-04-27%20at%2010.13.29%20PM.png)
 ## Code source
 Starter code is given and can be found in this repository: 
 https://github.com/coding-boot-camp/miniature-eureka
