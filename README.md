@@ -2,7 +2,7 @@
 Visit the deployed site at https://note-taker-osuchaya.herokuapp.com/notes
 
 Screeshot of deployed site:
-![/Users/suchayaosatis/Desktop/note-taker/public/assets/Screenshot 2023-04-27 at 10.13.29 PM.png](/)
+![](/Users/suchayaosatis/Desktop/note-taker/public/assets/Screenshot 2023-04-27 at 10.13.29 PM.png)
 
 ## Code source
 Starter code is given and can be found in this repository: 
